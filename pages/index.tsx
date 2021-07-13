@@ -1,9 +1,10 @@
+import Nav from '../components/Nav'
 
-
-export default function Home() {
+const Home = () => {
   return (
-    <div className="text-green-700">
-      coffeee shop
-    </div>
+      <Nav />
   )
 }
+
+export default Home
+
