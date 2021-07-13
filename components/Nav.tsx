@@ -2,12 +2,12 @@ import logo from '../public/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import Sidebar from './Sidebar'
+import MobileMenu from './MobileMenu'
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
 
-    return (
+    return ( 
         <nav className="bg-red-500 py-2 flex justify-center items-center">
             <div className="flex justify-between items-center w-full max-w-screen-2xl px-6">
                 <Link href='/'>
@@ -27,7 +27,7 @@ const Nav = () => {
                 </div>
             </div>
             {/* sidebar for mobile screens */}
-            <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}/>
+            <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen}/>
        </nav>
     )
 }
