@@ -7,7 +7,7 @@ interface MobileMenuProps {
 
 const Sidebar = ({isOpen, setIsOpen}: MobileMenuProps) => {
     return (
-        <div className={isOpen ? "opacity-100 top-0 fixed z-10 w-full h-full bg-gray-500 flex flex-col justify-center items-center transition-all duration-300 ease-in-out"
+        <div className={isOpen ? "opacity-100 top-0 fixed z-20 w-full h-full bg-gray-500 flex flex-col justify-center items-center transition-all duration-300 ease-in-out"
                         : "opacity-0 -top-full fixed z-10 w-full h-full bg-gray-500 flex flex-col justify-center items-center transition-all duration-300 ease-in-out"}
         >
             <button onClick={() => setIsOpen(false)} className="h-8 w-10 top-5 right-6 absolute hover:text-white">
