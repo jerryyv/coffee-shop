@@ -1,24 +1,35 @@
 import Drink from './Drink'
 import { MenuItem } from '../types'
+import { useState, useMemo } from 'react'
 
 
 interface DrinkMenuProps {
-    menuItems: MenuItem[];
+    menuItems: MenuItem[]
 }
 
 const DrinkMenu = ({menuItems}: DrinkMenuProps) => {
+    const categories = ['All', 'Coffee', 'Tea', 'Juice']
+    const [selectedCategory, setSelectedCategory] = useState('all')
+
+    const shownItems = useMemo(() => {
+        if(selectedCategory === 'all') {
+            return menuItems
+        } else {
+            return menuItems.filter(item => item.fields.type === selectedCategory)
+        }
+    },[selectedCategory])
+
     return (
         <div className="bg-tan py-6">
         <div className='flex flex-col items-center'>
             <h1 className='text-2xl'>Best Of Our Menu</h1>
             <div className='space-x-6 my-6'>
-                <button className="btn">All</button>
-                <button className="btn">Coffee</button>
-                <button className="btn">Tea</button>
-                <button className="btn">Juice</button>
+                {categories.map((category, index) => (
+                    <button key={index} className="btn" onClick={() => setSelectedCategory(category.toLowerCase())}>{category}</button>
+                ))}
             </div>
             <div className='grid grid-cols-2'>
-                {menuItems.map((item) => (
+                {shownItems.map((item) => (
                     <Drink key={item.sys.id} item={item}/>
                 ))}
             </div>

@@ -13,6 +13,7 @@ export interface MenuItem {
       price: number
       description: string
       thumbnail: MenuItemThumbnail
+      type: string
     }
     sys: {
         id: string
