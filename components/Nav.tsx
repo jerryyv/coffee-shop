@@ -10,9 +10,9 @@ const Nav = () => {
     return ( 
         <nav className="bg-white py-2 flex justify-center items-center">
             <div className="flex justify-between items-center w-full max-w-screen-2xl px-6">
-                <Link href='/'>
+                {/* <Link href='/'> */}
                 <Image src={logo} alt="logo" className="cursor-pointer"></Image>
-                </Link>
+                {/* </Link> */}
                 <div>
                     <ul className="hidden sm:flex space-x-2">
                         <li><Link href='/'>Home</Link></li>
@@ -21,7 +21,7 @@ const Nav = () => {
                     {/* hamburger menu icon for mobile screens */}
                     <button onClick={() => setIsOpen(true)} className="h-12 w-8 sm:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                     </button>
                 </div>

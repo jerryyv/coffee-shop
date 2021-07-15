@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <div className="h-screen relative flex justify-center items-center">
+        <div className="h-96 relative flex justify-center items-center">
             <div className="absolute h-full w-full">
             <Image src={background} alt='background-img' layout="fill"
                  className='object-cover'
