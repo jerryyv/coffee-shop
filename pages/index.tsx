@@ -5,7 +5,7 @@ import Hero from '../components/Hero'
 import Info from '../components/Info'
 import DrinkMenu from '../components/DrinkMenu'
 import ProductList from '../components/ProductList'
-
+import Contact from '../components/Contact'
 
 interface HomeProps {
   menuItems: MenuItem[];
@@ -21,6 +21,7 @@ const Home = ({menuItems, products}: HomeProps) => {
       <Info />
       <DrinkMenu menuItems={menuItems}/>
       <ProductList products={products}/>
+      <Contact />
     </>
   )
 }
