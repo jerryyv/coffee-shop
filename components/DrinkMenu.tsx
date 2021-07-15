@@ -24,12 +24,12 @@ const DrinkMenu = ({menuItems}: DrinkMenuProps) => {
         <div className='flex flex-col items-center'>
             <h1 className='text-2xl'>Best Of Our Menu</h1>
             <div className='space-x-6 my-6'>
-                {categories.map((category, index) => (
+                {categories.map((category,index) => (
                     <button key={index} className="btn" onClick={() => setSelectedCategory(category.toLowerCase())}>{category}</button>
                 ))}
             </div>
             <div className='grid grid-cols-2'>
-                {shownItems.map((item) => (
+                {shownItems.map(item => (
                     <Drink key={item.sys.id} item={item}/>
                 ))}
             </div>

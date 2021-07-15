@@ -1,22 +1,26 @@
+import { MenuItem, ProductItem } from '../types'
+import { createClient } from 'contentful'
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import Info from '../components/Info'
 import DrinkMenu from '../components/DrinkMenu'
-import { createClient } from 'contentful'
-import { MenuItem } from '../types'
+import ProductList from '../components/ProductList'
+
 
 interface HomeProps {
   menuItems: MenuItem[];
+  products: ProductItem[]
 }
 
 
-const Home = ({menuItems}: HomeProps) => {
+const Home = ({menuItems, products}: HomeProps) => {
   return (
     <>
       <Nav />
       <Hero />
       <Info />
       <DrinkMenu menuItems={menuItems}/>
+      <ProductList products={products}/>
     </>
   )
 }
@@ -27,11 +31,13 @@ export const getStaticProps = async () => {
       accessToken: process.env.CONTENTFUL_ACCESS_KEY as string 
   })
 
-  const res = await client.getEntries({content_type:'menuItem'})
+  const menuItems = await client.getEntries({ content_type:'menuItem' })
+  const products = await client.getEntries({ content_type:'product' })
   
   return {
       props: { 
-          menuItems: res.items 
+          menuItems: menuItems.items, 
+          products : products.items
       }
   }
 }

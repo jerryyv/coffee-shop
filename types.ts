@@ -1,4 +1,4 @@
-interface MenuItemThumbnail {
+interface ContentfulImage {
     fields: {
         title: string;
         file: {
@@ -12,8 +12,19 @@ export interface MenuItem {
       title: string
       price: number
       description: string
-      thumbnail: MenuItemThumbnail
+      thumbnail: ContentfulImage
       type: string
+    }
+    sys: {
+        id: string
+    }
+}
+
+export interface ProductItem {
+    fields: {
+        title: string
+        price: number
+        image: ContentfulImage
     }
     sys: {
         id: string
