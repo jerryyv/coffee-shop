@@ -25,7 +25,7 @@ const Contact = () => {
                         id="name"
                         className="p-2 mb-4 border rounded border-gray-400"
                         />
-                        <button type="submit" className="btn mt-6">Submit</button>
+                        <button type="submit" className="btn my-6">Submit</button>
                     </form>
                
             </div>

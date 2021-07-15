@@ -1,6 +1,6 @@
 import { MenuItem, ProductItem } from '../types'
 import { createClient } from 'contentful'
-import Nav from '../components/Nav'
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Info from '../components/Info'
 import DrinkMenu from '../components/DrinkMenu'
@@ -15,14 +15,13 @@ interface HomeProps {
 
 const Home = ({menuItems, products}: HomeProps) => {
   return (
-    <>
-      <Nav />
+    <Layout>
       <Hero />
       <Info />
       <DrinkMenu menuItems={menuItems}/>
       <ProductList products={products}/>
       <Contact />
-    </>
+    </Layout>
   )
 }
 
