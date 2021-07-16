@@ -1,4 +1,4 @@
-import logo from '../public/logo.svg'
+import logo from '../../public/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -10,9 +10,11 @@ const Nav = () => {
     return ( 
         <nav className="bg-white py-2 flex justify-center items-center">
             <div className="flex justify-between items-center w-full max-w-screen-2xl px-6">
-                {/* <Link href='/'> */}
-                <Image src={logo} alt="logo" className="cursor-pointer"></Image>
-                {/* </Link> */}
+                <Link href='/'>
+                    <div className="cursor-pointer">
+                        <Image src={logo} alt="logo"/>
+                    </div>
+                </Link>
                 <div>
                     <div className="hidden sm:flex space-x-4 items-center">
                         <ul className="flex space-x-2">

@@ -1,4 +1,4 @@
-import { MenuItem } from '../types'
+import { MenuItem } from '../../types'
 import Image from 'next/image'
 
 interface DrinkProps {
@@ -12,6 +12,7 @@ const Drink = ({ item } : DrinkProps) => {
             <Image 
                 src={`https:${thumbnail.fields.file.url}`}
                 alt={thumbnail.fields.title}
+                layout='fixed'
                 width={50}
                 height={50}
                 className='object-cover'

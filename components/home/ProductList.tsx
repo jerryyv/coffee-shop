@@ -1,4 +1,4 @@
-import { ProductItem } from '../types'
+import { ProductItem } from '../../types'
 import Product from './Product'
 
 interface ProductListProps {

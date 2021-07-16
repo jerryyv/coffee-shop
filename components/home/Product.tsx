@@ -1,4 +1,4 @@
-import { ProductItem} from '../types'
+import { ProductItem} from '../../types'
 import Image from 'next/image'
 
 interface ProductProps {

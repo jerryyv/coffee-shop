@@ -1,22 +1,21 @@
 import { MenuItem, ProductItem } from '../types'
 import { createClient } from 'contentful'
-import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-import Info from '../components/Info'
-import DrinkMenu from '../components/DrinkMenu'
-import ProductList from '../components/ProductList'
-import Contact from '../components/Contact'
+ import Layout from '../components/globals/Layout'
+import Hero from '../components/globals/Hero'
+import Info from '../components/home/Info'
+import DrinkMenu from '../components/home/DrinkMenu'
+import ProductList from '../components/home/ProductList'
+import Contact from '../components/globals/Contact'
 
 interface HomeProps {
   menuItems: MenuItem[];
   products: ProductItem[]
 }
 
-
 const Home = ({menuItems, products}: HomeProps) => {
   return (
     <Layout>
-      <Hero />
+      <Hero imageUrl='/../public/default-background.jpeg' title='Coffee Shop'/>
       <Info />
       <DrinkMenu menuItems={menuItems}/>
       <ProductList products={products}/>

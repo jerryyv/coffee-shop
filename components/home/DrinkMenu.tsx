@@ -1,5 +1,5 @@
 import Drink from './Drink'
-import { MenuItem } from '../types'
+import { MenuItem } from '../../types'
 import { useState, useMemo } from 'react'
 
 
@@ -21,14 +21,14 @@ const DrinkMenu = ({menuItems}: DrinkMenuProps) => {
 
     return (
         <div className="bg-tan py-6">
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center max-w-screen-lg mx-8 lg:mx-auto'>
             <h1 className='text-2xl'>Best Of Our Menu</h1>
-            <div className='space-x-6 my-6'>
+            <div className='space-x-6 my-6 flex flex-wrap'>
                 {categories.map((category,index) => (
                     <button key={index} className="btn" onClick={() => setSelectedCategory(category.toLowerCase())}>{category}</button>
                 ))}
             </div>
-            <div className='grid grid-cols-2'>
+            <div className='grid md:grid-cols-2'>
                 {shownItems.map(item => (
                     <Drink key={item.sys.id} item={item}/>
                 ))}
