@@ -13,6 +13,11 @@ const Layout = ({title, description, children}: LayoutProps) => {
             <Head>
                 <title>{title}</title>
                 <meta name='description' content={description} />
+                
+                {/* snipcart tags */}
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossOrigin="anonymous"></script>
+                <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="MjM3YmEyMTYtYTJlYi00OWYzLTkxNjQtMTY5ODNjOTA1ODc4NjM3NjIwNTI4NDg1MTg2MjIy" id="snipcart"></script>
+                <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
             </Head>
             <Nav />
             <div>

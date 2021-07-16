@@ -19,7 +19,14 @@ const Product = ({item}: ProductProps) => {
             <div className='flex flex-col items-center h-1/2 p-6'>
                 <h3>{title}</h3>
                 <p>{`$${price}`}</p>
-                <button className='btn mt-6'>Add To Cart</button>
+                <button 
+                    className='btn mt-6 snipcart-add-item' 
+                    data-item-id={item.sys.id}
+                    data-item-name={title}
+                    data-item-price={price}
+                    data-item-image={image.fields.file.url}
+                    data-item-url="/"
+                >Add To Cart</button>
             </div>
 
           
