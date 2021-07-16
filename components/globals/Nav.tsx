@@ -8,18 +8,18 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     return ( 
-        <nav className="bg-white py-2 flex justify-center items-center">
-            <div className="flex justify-between items-center w-full max-w-screen-2xl px-6">
+        <nav className="bg-gray-100 py-2 flex items-center">
+            <div className="flex justify-between items-center w-full mx-4 lg:mx-10">
                 <Link href='/'>
                     <div className="cursor-pointer">
                         <Image src={logo} alt="logo"/>
                     </div>
                 </Link>
                 <div>
-                    <div className="hidden sm:flex space-x-4 items-center">
-                        <ul className="flex space-x-2">
-                            <li><Link href='/'>Home</Link></li>
-                            <li><Link href='/about'>About</Link></li>
+                    <div className="hidden sm:flex space-x-8 items-center">
+                        <ul className="flex space-x-4 text-gray-700">
+                            <li className='hover:text-black'><Link href='/'>Home</Link></li>
+                            <li className='hover:text-black'><Link href='/about'>About</Link></li>
                         </ul>
                         <a href='#' className='snipcart-checkout h-8 w-8 text-yellow-500'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

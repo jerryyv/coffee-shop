@@ -12,13 +12,13 @@ const Product = ({item}: ProductProps) => {
             <Image 
                 src={`https:${image.fields.file.url}`}
                 alt={image.fields.title}
-                width={300}
+                width={320}
                 height={200}
                 className='object-cover'
             />
             <div className='flex flex-col items-center h-1/2 p-6'>
-                <h3>{title}</h3>
-                <p>{`$${price}`}</p>
+                <h3 className="text-gray-700 font-semibold">{title}</h3>
+                <p className="mt-2 text-gray-700">{`$${price}`}</p>
                 <button 
                     className='btn mt-6 snipcart-add-item' 
                     data-item-id={item.sys.id}

@@ -20,18 +20,20 @@ const DrinkMenu = ({menuItems}: DrinkMenuProps) => {
     },[selectedCategory])
 
     return (
-        <div className="bg-tan py-6">
-        <div className='flex flex-col items-center max-w-screen-lg mx-8 lg:mx-auto'>
-            <h1 className='text-2xl'>Best Of Our Menu</h1>
-            <div className='space-x-6 my-6 flex flex-wrap'>
-                {categories.map((category,index) => (
-                    <button key={index} className="btn" onClick={() => setSelectedCategory(category.toLowerCase())}>{category}</button>
-                ))}
-            </div>
-            <div className='grid md:grid-cols-2'>
-                {shownItems.map(item => (
-                    <Drink key={item.sys.id} item={item}/>
-                ))}
+        <div className='bg-tan py-12'>
+        <div className='flex flex-col items-center'>
+            <h2 className='text-center'>Best Of Our Menu</h2>
+            <div className='max-w-screen-lg mx-6'>
+                <div className='space-x-6 my-6 flex flex-wrap justify-center'>
+                    {categories.map((category,index) => (
+                        <button key={index} className='btn my-2' onClick={() => setSelectedCategory(category.toLowerCase())}>{category}</button>
+                    ))}
+                </div>
+                <div className='grid md:grid-cols-2'>
+                    {shownItems.map(item => (
+                        <Drink key={item.sys.id} item={item}/>
+                    ))}
+                </div>
             </div>
         </div>
         </div>

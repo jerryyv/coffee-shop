@@ -19,10 +19,10 @@ const Drink = ({ item } : DrinkProps) => {
             />
             <div className='ml-4 w-full'>
                 <div className='flex justify-between'>
-                    <h3>{title}</h3>
+                    <h3 className='text-gray-700 font-semibold'>{title}</h3>
                     <p className='text-yellow-500'>{`$${price}`}</p>
                 </div>
-                <p>{description}</p>
+                <p className='text-gray-700'>{description}</p>
             </div>
         </div>
     )

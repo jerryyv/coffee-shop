@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         'tan':'#ece8dc'
-      }
+      }, 
     },
   },
   variants: {

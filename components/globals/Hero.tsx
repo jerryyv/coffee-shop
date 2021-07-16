@@ -13,7 +13,7 @@ const Hero = ({title, imageUrl}: HeroProps) => {
             />
             </div>
             <div className="h-full w-full bg-yellow-500 bg-opacity-40 z-10 flex justify-center items-center">
-                <h1 className="text-white text-5xl font-bold uppercase">{title}</h1>
+                <h1 className="text-white text-5xl font-bold uppercase text-center">{title}</h1>
             </div>
         </div>
     )
