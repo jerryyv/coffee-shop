@@ -24,7 +24,7 @@ const Contact = () => {
                             id="name"
                             className="form-text"
                             />
-                            <button type="submit" className="btn my-6">Submit</button>
+                            <button type="submit" className="btn my-6 text-lg ">Submit</button>
                         </form>
             </div>
         </div>

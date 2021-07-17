@@ -17,7 +17,7 @@ const Nav = () => {
                 </Link>
                 <div>
                     <div className="hidden sm:flex space-x-8 items-center">
-                        <ul className="flex space-x-4 text-gray-700">
+                        <ul className="flex space-x-4 text-gray-700 text-lg">
                             <li className='hover:text-black'><Link href='/'>Home</Link></li>
                             <li className='hover:text-black'><Link href='/about'>About</Link></li>
                         </ul>

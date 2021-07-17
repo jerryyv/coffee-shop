@@ -8,7 +8,7 @@ interface DrinkMenuProps {
 }
 
 const DrinkMenu = ({menuItems}: DrinkMenuProps) => {
-    const categories = ['All', 'Coffee', 'Tea', 'Juice']
+    const categories = ['all', 'coffee', 'tea', 'juice']
     const [selectedCategory, setSelectedCategory] = useState('all')
 
     const shownItems = useMemo(() => {
@@ -26,7 +26,11 @@ const DrinkMenu = ({menuItems}: DrinkMenuProps) => {
             <div className='max-w-screen-lg mx-6'>
                 <div className='space-x-6 my-6 flex flex-wrap justify-center'>
                     {categories.map((category,index) => (
-                        <button key={index} className='btn my-2' onClick={() => setSelectedCategory(category.toLowerCase())}>{category}</button>
+                        <button key={index} 
+                            className={selectedCategory===category?'bg-yellow-500 text-black capitalize border rounded-md py-1 px-3 my-2':'btn my-2'} 
+                            onClick={() => setSelectedCategory(category)}
+                                >{category}
+                        </button>
                     ))}
                 </div>
                 <div className='grid md:grid-cols-2'>
