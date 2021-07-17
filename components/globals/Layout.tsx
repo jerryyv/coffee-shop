@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Nav from './Nav'
 import Footer from './Footer'
+
 interface LayoutProps {
     title: string
     description: string
@@ -30,7 +31,7 @@ const Layout = ({title, description, children}: LayoutProps) => {
 
 Layout.defaultProps = {
     title: 'Coffee Shop',
-    description: 'Welcome to the Coffee Chop'
+    description: 'Welcome to the Coffee Shop'
 }
 
 export default Layout

@@ -4,6 +4,7 @@ interface HeroProps {
     title: string
     imageUrl: string
 }
+
 const Hero = ({title, imageUrl}: HeroProps) => {
     return (
         <div className="h-96 relative flex justify-center items-center">

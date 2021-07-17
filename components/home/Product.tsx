@@ -28,8 +28,6 @@ const Product = ({item}: ProductProps) => {
                     data-item-url="/"
                 >Add To Cart</button>
             </div>
-
-          
         </div>
     )
 }
