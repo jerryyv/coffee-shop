@@ -1,5 +1,6 @@
 import { MenuItem, ProductItem } from '../types'
 import { createClient } from 'contentful'
+import background from '../public/default-background.jpeg'
  import Layout from '../components/globals/Layout'
 import Hero from '../components/globals/Hero'
 import Info from '../components/home/Info'
@@ -15,7 +16,7 @@ interface HomeProps {
 const Home = ({menuItems, products}: HomeProps) => {
   return (
     <Layout>
-      <Hero imageUrl='/../public/default-background.jpeg' title='Coffee Shop'/>
+      <Hero imageUrl={background} title='Coffee Shop'/>
       <Info />
       <DrinkMenu menuItems={menuItems}/>
       <ProductList products={products}/>

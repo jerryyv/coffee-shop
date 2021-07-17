@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 interface HeroProps {
     title: string
-    imageUrl: string
+    imageUrl: StaticImageData
 }
 
 const Hero = ({title, imageUrl}: HeroProps) => {

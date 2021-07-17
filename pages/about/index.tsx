@@ -1,11 +1,12 @@
 import Layout from '../../components/globals/Layout'
 import Hero from '../../components/globals/Hero'
 import Link from 'next/link'
+import aboutBackground from '../../public/about-background.jpeg'
 
 const AboutPage = () => {
     return (
         <Layout title='About Us'>
-            <Hero imageUrl='/../public/about-background.jpeg' title='about us'/>
+            <Hero imageUrl={aboutBackground} title='about us'/>
             <div className='py-12'>
                 <div className='flex flex-col items-center text-center '>
                     <h2>who we are</h2>
